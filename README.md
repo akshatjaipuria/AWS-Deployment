@@ -72,20 +72,26 @@ Please note, the first API call might timeout as the service requires cold start
 1. Test 1
 
 Image to be classified
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/Yellow-Labrador-Retriever.jpg)
+<p align="center">
+  <img src="fhttps://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/Yellow-Labrador-Retriever.jpg" width="800">
+</p>
 
 Model result on Insomnia
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_dog.png)
-
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_dog.png" width="800">
+</p>
 
 2. Test 2
 
 Image to be classified
-
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg)
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg" width="800">
+</p>
 
 Model result on Insomnia
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_car.png)
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_car.png" width="800">
+</p>
 
 
 
