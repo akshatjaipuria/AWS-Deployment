@@ -2,7 +2,7 @@
 
 This is to deploy MobileNet v2 model on AWS Lambda.
 
-Serverless web framework is used to build the application. The application is available as a API service hosted on AWS Lambda.
+Serverless web framework is used to build the application. The application is available as an API service hosted on AWS Lambda.
 
 ## Project Setup
 
