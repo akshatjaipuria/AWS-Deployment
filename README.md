@@ -104,34 +104,32 @@ Execute command to deploy on AWS
 npm run deploy
 ```
 
-
 ## Results
 
 DNN model can be tested to classify images using any REST client such as Insomnia. Few such iamges classified by the model are shared below.
 
 Please note, the first API call might timeout as the service requires cold start. Please resenf the API request again.
 
-1. Test 1
+**1. Test 1**
 
 Image to be classified
-
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/Yellow-Labrador-Retriever.jpg)
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/Yellow-Labrador-Retriever.jpg" width="1000">
+</p>
 
 Model result on Insomnia
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_dog.png" width="1000">
+</p>
 
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_dog.png)
-
-
-2. Test 2
+**2. Test 2**
 
 Image to be classified
-
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg)
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg" width="1000">
+</p>
 
 Model result on Insomnia
-
-![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_car.png)
-
-
-
-
+<p align="center">
+  <img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_car.png" width="1000">
+</p>
