@@ -63,5 +63,29 @@ traced_model = torch.jit.trace(model, trorch.randn(1,3,224,224))
 traced_model.save('mobilenetv2.pt')
 ```
 
+## Results
+
+DNN model can be tested to classify images using any REST client such as Insomnia. Few such iamges classified by the model are shared below.
+
+Please note, the first API call might timeout as the service requires cold start. Please resenf the API request again.
+
+1. Test 1
+
+Image to be classified
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/Yellow-Labrador-Retriever.jpg)
+
+Model result on Insomnia
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_dog.png)
+
+
+2. Test 2
+
+Image to be classified
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg)
+
+Model result on Insomnia
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/response_car.png)
+
+
 
 
