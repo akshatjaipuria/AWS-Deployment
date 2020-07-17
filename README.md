@@ -81,6 +81,7 @@ Model result on Insomnia
 2. Test 2
 
 Image to be classified
+
 ![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/images/car.jpg)
 
 Model result on Insomnia
