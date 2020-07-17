@@ -6,7 +6,7 @@ Serverless web framework is used to build the application. The application is av
 
 ## Project Setup
 
-This project is created on Oracle VM box with Ubuntu OS.
+This project is created on Oracle VM box with Ubuntu OS. The steps can be followed to deploy a model on indepenmdent Ubuntu OS or using a Virtual Machine as well.
 
 ### Install necessary packages and files- 
 
