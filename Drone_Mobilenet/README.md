@@ -1,11 +1,11 @@
 # Training Mobilenet on Custom Drone Dataset
 
-NOTE: 
+**NOTE:**
 ```
 Older versions of torch and torchvision had to be installed in colab in order to deploy code to AWS Lambda
 !pip install torch==1.5.0 torchvision==0.6.0 -f https://download.pytorch.org/whl/torch_stable.html 
 ```
-HIGHLIGHTS:
+**HIGHLIGHTS:**
 
 - Model: MobilenetV2
 - Custome Dataset: 4 classes
@@ -44,6 +44,7 @@ for num, image in enumerate(test_imgs):
 We are using the MobilenetV2 pretrained model, but modifying the last layer:
 
 Total no. of parameters: 2,228,996
+
 Final val accuracy: 88.74%
 
 <h3>Image Galary</h3>
