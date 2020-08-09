@@ -58,7 +58,9 @@ There are four different classes of images in the dataset:
 - **Resizing Strategy** - The dataset collected contains images of resolution varying from 130x130 pixels to 6000x4000 pixels. We wanted all images to be of size 224 x 224, without losing the aspect ratio. To accomplish this, for each image, the ccomparatively larger dimension (height or width) was resized to 224 and the smaller one was also scaled keeping the aspect ratio constant. After this, we padded the shorted dimension equally on both sides.
 
 
-![/prepare_drone_dataset.ipynb]
+[Link to the code](/prepare_drone_dataset.ipynb)
+
+[The dataset can be downloaded from here.](https://drive.google.com/file/d/1-H8jd8g7cu1AM5r6L_TPDpq6rsmPLLcd/view?usp=sharing)
 
 Code for the resize:
 ```python
