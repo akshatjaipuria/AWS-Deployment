@@ -49,20 +49,43 @@ There are four different classes of images in the dataset:
 
 <h3>Data Preparation</h3>
 
-- The collected dataset had invalid files such as .txt and webpages. The invalid files have been removed. Also, the dataset contained duplicate images which too have been removed. All this data was stored in 4 different .zip files, which were named in a particular format eg: "flying_birds.zip" , "winged_drones.zip"
+- The collected dataset had invalid files such as .txt and webpages. The invalid files have been removed. Also, the dataset contained duplicate images which too have been removed. All this data was stored in 4 different .zip files, which were named in a particular format eg: "flying_birds.zip" , "winged_drones.zip".
 
-- **Resizing Strategy** - The dataset collected contains images of resolution varying from 130x130 pixels to 6000x4000 pixels. So, to reduce the image pre-processing during dataload, the dataset has been resized to 224 x 224 resolution while maintaining the aspect ratio. For cases where the dimensions of the images are less than 224, padding has been added to side.
+- The images from each class were then processed, resized and saved in to folders, train and val. The images saved in train and val were shuffeled and splitted in 70:30 ratio for train:val.
 
-- The prepared dataset has been split into train:test::70:30 ratio
+- We resized and saved the images beforehand to avoid doing the same operation for each epoch when the data loads and thus saving considerable amount of computation.
 
-![Link to the code]
+- **Resizing Strategy** - The dataset collected contains images of resolution varying from 130x130 pixels to 6000x4000 pixels. We wanted all images to be of size 224 x 224, without losing the aspect ratio. To accomplish this, for each image, the ccomparatively larger dimension (height or width) was resized to 224 and the smaller one was also scaled keeping the aspect ratio constant. After this, we padded the shorted dimension equally on both sides.
 
-Code for the split:
-``` 
-for num, image in enumerate(test_imgs):
-        file = image.split('/')[-1].split('\\')[-1]
-        dest = test_dest+str(num+1)+".jpg"
-        resize_save(image, dest) 
+
+![/prepare_drone_dataset.ipynb]
+
+Code for the resize:
+```python
+def resize_save(im_pth, dst):
+    desired_size = 224
+    im = cv2.imread(im_pth)
+    if type(im) == type(None):
+        return
+    old_size = im.shape[:2] # old_size is in (height, width) format
+
+    ratio = float(desired_size)/max(old_size)
+    new_size = tuple([int(x*ratio) for x in old_size])
+
+    # new_size should be in (width, height) format
+
+    im = cv2.resize(im, (new_size[1], new_size[0]))
+
+    delta_w = desired_size - new_size[1]
+    delta_h = desired_size - new_size[0]
+    top, bottom = delta_h//2, delta_h-(delta_h//2)
+    left, right = delta_w//2, delta_w-(delta_w//2)
+
+    color = [0, 0, 0]
+    new_im = cv2.copyMakeBorder(im, top, bottom, left, right, cv2.BORDER_CONSTANT,
+        value=color)
+
+    cv2.imwrite(dst, new_im)
 ```
 
 
