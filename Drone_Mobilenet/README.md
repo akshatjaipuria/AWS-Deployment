@@ -1,34 +1,61 @@
 # Training Mobilenet on Custom Drone Dataset
 
-**NOTE:**
-```
-Older versions of torch and torchvision had to be installed in colab in order to deploy code to AWS Lambda
-!pip install torch==1.5.0 torchvision==0.6.0 -f https://download.pytorch.org/whl/torch_stable.html 
-```
+The objective of the CNN model is to train MobileNet v2 on custom dataset of flying obects consisting of small quadcopters, large quadcopters, Winged drones and flying birds. The model is trained by transfer learning. Also, the trained model is deployed on AWS Lambda.
+
 **HIGHLIGHTS:**
 
 - Model: MobilenetV2
-- Custome Dataset: 4 classes
 - Total no. of parameters: 2,228,996
 - Loss: CrossEntropyLoss()
 - Optimizer: SGD
 - Scheduler: ReduceLROnPlateau
 - Final Accuracy: 88.74%
+- Batch size: 128
+- Epochs: 20 
 
 <h3>Dataset Stats</h3>
-These are four different classes of images in the dataset:
+There are four different classes of images in the dataset:
 
-1) "Flying Birds" - 7781 images
-2) "Large QuadCopters" - 3609 images
-3) "Small QuadCopters" - 3957 images
-4) "Winged Drones" - 3163 images
+<table>
+<thead>
+  <tr>
+    <th>Image Class</th>
+    <th>No of Images</th>
+    <th>Mean</th>
+    <th>Std. Dev</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Flying Birds<br></td>
+    <td>7781</td>
+    <td rowspan="4">[0.3749, 0.4123, 0.4352]</td>
+    <td rowspan="4">[0.3326, 0.3393, 0.3740]</td>
+  </tr>
+  <tr>
+    <td>Large QuadCopters</td>
+    <td>3609</td>
+  </tr>
+  <tr>
+    <td>Small QuadCopters</td>
+    <td>3957</td>
+  </tr>
+  <tr>
+    <td>Winged Drones</td>
+    <td>3163</td>
+  </tr>
+</tbody>
+</table>
 
 <h3>Data Preparation</h3>
 
-- All this data was stored in 4 different .zip files, which were named in a particular format eg: "flying_birds.zip" , "winged_drones.zip"
-- The input images were all of different sizes and had to be transformed into 224x224 size images:
+- The collected dataset had invalid files such as .txt and webpages. The invalid files have been removed. Also, the dataset contained duplicate images which too have been removed. All this data was stored in 4 different .zip files, which were named in a particular format eg: "flying_birds.zip" , "winged_drones.zip"
 
-- Then the data was split into train:test::70:30 ratio
+- **Resizing Strategy** - The dataset collected contains images of resolution varying from 130x130 pixels to 6000x4000 pixels. So, to reduce the image pre-processing during dataload, the dataset has been resized to 224 x 224 resolution while maintaining the aspect ratio. For cases where the dimensions of the images are less than 224, padding has been added to side.
+
+- The prepared dataset has been split into train:test::70:30 ratio
+
+![Link to the code]
 
 Code for the split:
 ``` 
@@ -37,17 +64,27 @@ for num, image in enumerate(test_imgs):
         dest = test_dest+str(num+1)+".jpg"
         resize_save(image, dest) 
 ```
-- The code after splitting into training and validation datasets are stored into 2 different folders: "train" and "val"
-- These folders are loaded into colab during execution to save memory and time
+
 
 <h3>Model</h3>
-We are using the MobilenetV2 pretrained model, but modifying the last layer:
 
-Total no. of parameters: 2,228,996
+Pre-trained MobileNet v2 model has been considered for this dataset. The pre-trained model is designed for 1000 class predictions. Since, the dataset requires 4 class predictions, the last layer of the model is modified as follows-
 
-Final val accuracy: 88.74%
+```
+model = mobilenet_v2(pretrained=True)
+model.classifier[1] = nn.Linear(1280, 4)
+```
 
-<h3>Image Galary</h3>
+**NOTE:**
+
+Versions of torch and torchvision in colab and AWS Lambda is incompatible. For this reason, model is trained and deployed on torch, torchvision version 1.5.0 and 0.6.0 respectively.
+
+```
+!pip install torch==1.5.0 torchvision==0.6.0 -f https://download.pytorch.org/whl/torch_stable.html 
+```
+
+
+<h3>Image Gallery</h3>
 1) Misclassified Images of Flying Birds:
 
 ![Misclassified flying birds](images/fb.jpg)
