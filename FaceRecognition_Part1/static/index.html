@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="alert alert-info" role="alert">
+        <h2>Image classification and lot more!</h2>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Mobilenet</h1>
+        <p class="lead">Classify your image. Use the power of Mobilenet v2 to chechk which of the 1000 Imagenet classes it belongs to.</p>
+        <div>
+            <label for="imageFile1">Please choose the image: </label>
+            <input type="file", id="imageFile1">
+        </div>
+        <button type="submit" onClick="uploadAndClassifyImage1()" class="btn btn-outline-success btn-lg">Classify Image</button>
+        <!-- <input type="button" id="btnImageUpload1" class="btn btn-outline-success btn-lg" value="Classify Image"> -->
+        <p id="result1"></p>
+    </div>
+      
+    <div class="jumbotron">
+        <h1 class="display-4">Drone or what?</h1>
+        <p class="lead">Let's check if your image is a winged drone, small or large quadcopter or you are trying to fool the model with a flying bird! Hmmm.</p>
+        <div>
+            <label for="imageFile2">Please choose the image: </label>
+            <input type="file", id="imageFile2">
+        </div>
+        <button type="submit" onClick="uploadAndClassifyImage2()" class="btn btn-outline-success btn-lg">Classify Image</button>
+        <p id="result2"></p>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Align your face kid!</h1>
+        <p class="lead">Upload the image and get the aligned face back. Cool isn't it.</p>
+        <div>
+            <label for="imageFile3">Please choose the image: </label>
+            <input type="file", id="imageFile3">
+        </div>
+        <button type="submit" onClick="uploadAndAlignFace()" class="btn btn-outline-danger btn-lg">Align it please.</button>
+        <div><img id="imagebox" width = 250 src=""></div>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Swap it!</h1>
+        <p class="lead">Let's make it funny. Upload two images and we will swap the face for you. Try it out!</p>
+        <div>
+            <label for="imageFile4">Please choose the image, for which face has to be swapped: </label>
+            <input type="file", id="imageFile4">
+        </div>
+        <div>
+            <label for="imageFile5">Please choose the image with the new face: </label>
+            <input type="file", id="imageFile5">
+        </div>
+        <button type="submit" onClick="uploadAndSwapFace()" class="btn btn-outline-danger btn-lg">Swap it now!</button>
+        <div><img id="imagebox1" width = 300 src=""></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/upload.js"></script>
+  </body>
+</html>
