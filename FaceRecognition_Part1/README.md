@@ -23,7 +23,7 @@ Second feature is MobileNet v2 trained on custom dataset to classify flying obje
 
 ### Face Alignment model
 
-The third feature is Face Alignment. Face alignment is an important pre-step for facial recognition. Based on the facial landmarks (position of the eye, nose), Face Alignment tries to obtain a normalized rotation, translation and scale representation of the face. The model uses dlib's pre-trained landmarks model shape_predictor_68_face_landmarks.dat. Based on the landmark points detected by dlib's model, the input image is normalized such that left corner of the left eye and right corner of the right eye are at specified position in the output image.   
+The third feature is Face Alignment. Face alignment is an important pre-step for facial recognition. Based on the facial landmarks (position of the eye, nose), Face Alignment tries to obtain a normalized rotation, translation and scale representation of the face. The model uses dlib's pre-trained landmarks model shape_predictor_68_face_landmarks.dat. From the landmark points detected by dlib's model, the input image is normalized such that left corner of the left eye and right corner of the right eye are at specified position in the output image.   
 
 
 ### Face Swap model
