@@ -18,7 +18,7 @@ One of the feature is ResNet-34 model, which is trained on Imagenet dataset.
 
 ### MobileNet v2 model
 
-Second feature is MobileNet v2 trained on custom dataset to classify flying objects. 
+Second feature is MobileNet v2 trained on custom dataset to classify flying objects. Model setup can be found [here](https://github.com/akshatjaipuria/AWS-Deployment/tree/master/Drone_Mobilenet).
 
 
 ### Face Alignment model
@@ -39,6 +39,7 @@ The fourth feature is an attempt to swap face of the source image onto target in
 
 
 ### Face Alignment
-
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/FaceRecognition_Part1/images/facealign.jpg)
 
 ### Face Swap
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/FaceRecognition_Part1/images/faceswap.jpg)
