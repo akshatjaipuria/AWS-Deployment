@@ -26,11 +26,11 @@ The objective of this assignment is to finetune facial recognition classfier on 
   <tbody>
   <tr>
     <td>LFW Dataset<br></td>
-    <td></td>
+    <td>6733</td>
   </tr>
   <tr>
     <td>Custom Dataset<br></td>
-    <td></td>
+    <td>100</td>
   </tr>
   </tbody>
 </table>
