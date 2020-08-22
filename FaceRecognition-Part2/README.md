@@ -47,7 +47,6 @@ The objective of this assignment is to finetune facial recognition classfier on 
 <h2>Model</h2>
 
 - Inception Resnet V1: The Inception Resnet V1 model is pretrained on VGGFace2 where VGGFace2 is a large-scale face recognition dataset developed from Google image searches and “have large variations in pose, age, illumination, ethnicity and profession.”
-
 - Each layer’s weights in the model have an attribute called requires_grad that can be set to True or False. When finetuning the network we freeze all of the layers up through the last convolutional block by setting the requires_grad attributes to False and then only update the weights on the remaining layers.
 
 **NOTE:**
