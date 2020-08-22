@@ -7,8 +7,8 @@ The objective of this assignment is to finetune facial recognition classfier on 
 
 1. Model: Inception Resnet V1
 2. Dataset: LFW dataset along with 10 facial images of 10 famous people (sports players, actors)
-3. Total no. of parameters:
-4. Loss: 0.2544
+3. Total no. of parameters: 2,37,99,660
+4. Loss: CrossEntropyLoss()
 5. Optimizer: SGD
 6. Scheduler: StepLR
 7. Final Accuracy: 97%
