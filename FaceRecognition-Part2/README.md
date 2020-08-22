@@ -43,7 +43,7 @@ The objective of this assignment is to finetune facial recognition classfier on 
   Link to custom dataset: https://drive.google.com/drive/folders/1GQNfGR63a3QzND5jx-8zXdkcjd7fyK7s?usp=sharing
 - The images in the above datasets are mostly facial images and each of the images had to be aligned to get the frontal alignment of each face.
 - Repetition of folders had to be taken care of and no duplicates are maintained.
-- The above prepared data is then split into 70:30::train:validation sets.
+- The above prepared data is then split into 70:30:: train:validation sets.
 
 <h2>Model</h2>
 
