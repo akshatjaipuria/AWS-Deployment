@@ -57,3 +57,23 @@ Versions of torch and torchvision in colab and AWS Lambda is incompatible. For t
 ```
 !pip install torch==1.5.0 torchvision==0.6.0 -f https://download.pytorch.org/whl/torch_stable.html 
 ```
+
+<h2>Run Results</h2>
+<h3>Model Prediction</h3>
+Shared below is a Facial recognition prediction for an input image-
+<TABLE>
+  <TR>
+    <TH>Input Image</TH>
+    <TH>FR Prediction</TH>
+  </TR>
+   <TR>
+      <TD><img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/FaceRecognition-Part2/images/Rohit_Sharma_0005.jpg" alt="input_image"
+	title="inp_img" width="300" height="300" /></TD>
+      <TD>Prediction ID: 499<br>
+     Prediction name: Rohit Sharma</TD>
+   </TR>
+</TABLE>
+
+<h3>Training Loss Trend</h3>
+
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/FaceRecognition-Part2/images/LossVsIterations.jpg)
