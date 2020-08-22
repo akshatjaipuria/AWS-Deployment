@@ -8,12 +8,12 @@ The objective of this assignment is to finetune facial recognition classfier on 
 1. Model: Inception Resnet V1
 2. Dataset: LFW dataset along with 10 facial images of 10 famous people (sports players, actors)
 3. Total no. of parameters:
-4. Loss: 
-5. Optimizer: 
-6. Scheduler: 
-7. Final Accuracy:
-8. Batch size: 
-9. Epochs: 
+4. Loss: 0.2544
+5. Optimizer: SGD
+6. Scheduler: StepLR
+7. Final Accuracy: 97%
+8. Batch size: 8
+9. Epochs: 20
 
 <h2>Dataset Stats</h2>
 <table>
@@ -37,12 +37,13 @@ The objective of this assignment is to finetune facial recognition classfier on 
 
 <h2>Data Preparation</h2>
 
-- The LFW dataset contains about 5760 folders with images of various famous personalities. Each folder has different number of images varying from 1 to 50 images. 
+- The LFW dataset contains about 5760 folders with images of various famous personalities. Each folder has different number of images varying from 1 to 50 images. For our       training we choose all the folders having greater than 4 images.
   Link to LFW dataset: http://vis-www.cs.umass.edu/lfw/lfw-funneled.tgz
 - The custom dataset we created 10 folders with images of various famous personalities. Each folder has exactly 10 images in it.
   Link to custom dataset: https://drive.google.com/drive/folders/1GQNfGR63a3QzND5jx-8zXdkcjd7fyK7s?usp=sharing
 - The images in the above datasets are mostly facial images and each of the images had to be aligned to get the frontal alignment of each face.
 - Repetition of folders had to be taken care of and no duplicates are maintained.
+- The above prepared data is then split into 70:30::train:validation sets.
 
 <h2>Model</h2>
 
