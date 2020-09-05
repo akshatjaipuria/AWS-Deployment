@@ -65,6 +65,6 @@ Shared below is the Human Pose estimate from the model.
 
 ## Some Fun with Gestures
 
-We have used this Human Pose Estimation mapping to track the gesture of the person and invoke certain functionalities according to the movement of the body parts. For now, your implementation supports playing and stopping music. To play the song, the person needs to raise his/her left hand once, and the music starts. Similarly, to stop the misic the person has to raise the right hand up. THe demo video can be found on the following link.
+We have used this Human Pose Estimation mapping to track the gesture of the person and invoke certain functionalities according to the movement of the body parts. For now, your implementation supports playing and stopping music. To play the song, the person needs to raise his/her left hand once, and the music starts. Similarly, to stop the misic the person has to raise the right hand up. The demo video can be found on the following link.
 [Demo](https://drive.google.com/file/d/1h3Ka9SY4qQrd-6-rsW3T6xyQgE1gVUdE/view?usp=sharing)
 
