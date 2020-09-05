@@ -4,6 +4,8 @@ The objective of this assignment is to implement Simple Baseline Pose Estimation
 
 The model implementation is based on the paper [Simple Baseline for HPE and tracking](https://github.com/Microsoft/human-pose-estimation.pytorch). Pre-trained model (trained on POSE MPII dataset) has been used.
 
+The paper also addresses the problems encountered while tracking people using object recognition approach. Here, they have proposed and levereged the approach based on human pose and optical tracking. This one is a very cool concept used where we can use bipertite matching to map the same humans from one video frame to another with the help of predicted pose and optical tracking. The same mapped humans are assigned the same id as in the previous frame of the video, and others are assigned a new id. This approach also eliminates, upto an extent, the problem where the human body becomes a little blurry due to movement in subsequent frames and are not identified by a human identifier model.
+
 ## Simple Baseline for Human Pose Estimation
 
 ### Model Architecture
