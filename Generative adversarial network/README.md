@@ -24,14 +24,14 @@ GAN model consists of two parts-
 ### Real and Generated images
 
 Collage of real images and generated images is shared below.
-![](https://github.com/Shashank-Holla/TSAI-EVA4-Phase2/blob/master/06%20-%20Generative%20Adversarial%20Networks/results/realfake.jpg)
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Generative%20adversarial%20network/results/realfake.jpg)
 
 ### Generated images
 
 
 ### Discriminator/Generator loss during training
 
-![](https://github.com/Shashank-Holla/TSAI-EVA4-Phase2/blob/master/06%20-%20Generative%20Adversarial%20Networks/results/D%26G_loss.jpg)
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Generative%20adversarial%20network/results/D%26G_loss.jpg)
 
 ### Average Discriminator output for real and generated images
 
@@ -40,7 +40,7 @@ D(x) is the average discriminator output on classifying training images. Initial
 
 D(G(z)) is the average discriminator output in classifying the fake images. Average output is close to 0 when the training begins and converges to 0.5 as the generator trains.
 
-![](https://github.com/Shashank-Holla/TSAI-EVA4-Phase2/blob/master/06%20-%20Generative%20Adversarial%20Networks/results/avgOP_realfake.jpg)
+![](https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Generative%20adversarial%20network/results/avgOP_realfake.jpg)
 
 
 
