@@ -13,16 +13,23 @@ Further, the trained model is deployed on AWS Lambda.
 
 
 ## Model Architecture
+
+A variational autoencoder (VAE) provides a probabilistic manner for describing an observation in latent space. Thus, rather than building an encoder which outputs a single value to describe each latent state attribute,  encoder describes a probability distribution for each latent attribute. This is done by making  encoder not output an encoding vector of size n, rather, outputting two vectors of size n: a vector of means, μ, and another vector of standard deviations, σ.
+
 It consists of two networks:
 
 Encoder network: It translates the original high-dimension input into the latent low-dimensional code. The input size is larger than the output size.
 
 Decoder network: The decoder network recovers the data from the code, likely with larger and larger output layers.
 
-## Loss curve 
-![](images/loss.png)
+![](images/VAE.png)
 
 ## Results
+
+### Loss curve 
+![](images/loss.png)
+
+### Model's reconstructed images
 Original Images
 
 ![](images/original_images.png)  
