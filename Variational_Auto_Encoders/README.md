@@ -37,3 +37,12 @@ Original Images
 VAE reconstrction
 
 ![](images/var_reconstruction.png)
+
+### Model Generated images from mean and standard deviation
+
+![](images/generated.png)
+
+### Model's Interpolated images
+
+![](images/interpolate.png)
+
