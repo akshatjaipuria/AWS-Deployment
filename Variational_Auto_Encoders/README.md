@@ -19,4 +19,5 @@ Encoder network: It translates the original high-dimension input into the latent
 
 Decoder network: The decoder network recovers the data from the code, likely with larger and larger output layers.
 
-
+## Loss curve 
+![](images/loss.png)
