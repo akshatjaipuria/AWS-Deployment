@@ -23,4 +23,10 @@ Decoder network: The decoder network recovers the data from the code, likely wit
 ![](images/loss.png)
 
 ## Results
-![Original Images](images/original_images.png)    ![VAE reconstrction](images/var_reconstruction.png)
+Original Images
+
+![](images/original_images.png)  
+
+VAE reconstrction
+
+![](images/var_reconstruction.png)
