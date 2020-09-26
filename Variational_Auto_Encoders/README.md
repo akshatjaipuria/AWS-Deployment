@@ -21,3 +21,6 @@ Decoder network: The decoder network recovers the data from the code, likely wit
 
 ## Loss curve 
 ![](images/loss.png)
+
+## Results
+![](images/original_images.png)    ![](images/var_reconstruction.png)
