@@ -1,7 +1,6 @@
 # Variational Auto Encoders
 
-The objective here is to train a Variational Auto Encoders to generate Indian cars. The model generates new cars from pictures of real Indian cars.
-Further, the trained model is deployed on AWS Lambda.
+We train a Variational Auto Encoder, to compress and decompress images of cars. The dataset contains the images of cars, collected from the internet. A generic model architecture for a VAE is discussed in the sub section. 
 
 ## Model hyperparameters
 * Optimizer : Adam
