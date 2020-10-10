@@ -9,3 +9,18 @@ Neural Style Transfer is used to compose an image in the style of another image.
 - num-steps used: 250
 
 <h3>Results</h3>
+<TABLE>
+  <TR>
+    <TH>Style Image</TH>
+    <TH>Content Image</TH>
+    <TH>Output Image</TH>
+  </TR>
+   <TR>
+      <TD><img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Style-Transfer/Images/image1.jpg" alt="style_image"
+	title="Style Image" width="256" height="256" /></TD>
+      <TD><img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Style-Transfer/Images/download1.jpg" alt="content_image"
+	title="Content Image" width="256" height="256" /></TD>
+      <TD><img src="https://github.com/akshatjaipuria/AWS-Deployment/blob/master/Style-Transfer/Images/download.png" alt="output_image"
+	 width="256" height="256" /></TD>
+   </TR>
+</TABLE>
