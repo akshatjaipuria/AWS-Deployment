@@ -4,7 +4,9 @@ Neural Style Transfer is used to compose an image in the style of another image.
 
 <h3>Description</h3>
 - Model: VGG19 pre-trained model 
+
 - Loss functions: For Content Loss: 'conv_4' layer and for Style Loss: ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5'] layers 
+
 - num-steps used: 250
 
 <h3>Results</h3>
