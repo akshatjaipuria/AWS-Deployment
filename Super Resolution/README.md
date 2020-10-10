@@ -70,3 +70,6 @@ Shared below are the Peak Signal to Noise Ratio and Structural Similarity Index 
 
 ![](results/psnr_ssim.png)
 
+### Using upscale factor of 4
+We trained the model from scratch, keeping the upscale factor 4, and the output is presented here. Column 1 represents the images of size 56x56, column 2 represents the ground truth 224x224 sized image and the third column is the super resolution output of dimension 224x224.
+![](results/epoch_10_index_2.png)
