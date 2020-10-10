@@ -2,15 +2,16 @@
 
 The objective here is to train SR-GAN (Super Resolution- Generative Adversial Network) on the flying objects dataset to provide Super resolution of the flying object images. The model is then deployed on AWS.
 
+## Model Hyperparameters
+
+- Model : SRGAN
+- Batch Size : 64
+- Upscale Factor : 2
+- Epochs : 10
+- Loss function : Content Loss + Adversial Loss
+- Optimizer : Adam
+
 ## Dataset Details
-<h3>Description</h3>
-
-- Model: SRGAN
-- batch_size=64
-- upscale_facor=2
-- epochs=10
-
-<h3>Dataset Stats</h3>
 There are four different classes of images in the dataset:
 
 <table>
