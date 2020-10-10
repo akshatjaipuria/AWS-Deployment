@@ -2,7 +2,7 @@
 
 Here we implement image super resolution using SRGAN with custome dataset namely Drone dataset.
 
-<h3>HIGHLIGHTS</h3>
+<h3>Description</h3>
 
 - Model: SRGAN
 - batch_size=64
