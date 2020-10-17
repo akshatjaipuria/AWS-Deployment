@@ -13,11 +13,11 @@ Since RNN models suffer from vanishing gradient problem, LSTM (Long Short-Term M
 
 ## Model Hyperparameters
 
-Batch Size : 64
-Epochs : 5
-Loss function : Binary Cross Entropy Loss
-Optimizer : Adam
-Embedding size : 100
+* Batch Size : 64
+* Epochs : 5
+* Loss function : Binary Cross Entropy Loss
+* Optimizer : Adam
+* Embedding size : 100
 
 ## Results
 
